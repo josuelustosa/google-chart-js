@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Importing Google Chats Library -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <!-- Importing JS files-->
+    <script src="drawChart.js"></script>
+
+    <!-- Loading Google Chats Library type and settings -->
+    <script>
+      google.charts.load("current", {
+        packages: ["corechart"],
+        language: "pt",
+      });
+
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
+
+    <title>Google Charts - JS</title>
+  </head>
+  <body>
+    <h1>
+      Curso Alura - Gráficos na web parte 1: criando e customizando gráficos
+
+      <!-- Identify where the chart should be drawn -->
+      <div id="myPieChart"></div>
+      <div id="myLineChart"></div>
+      <div id="myColumnChart"></div>
+      <div id="mySurpriseColumnChart"></div>
+    </h1>
+  </body>
+</html>
