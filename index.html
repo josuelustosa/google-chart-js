@@ -8,8 +8,12 @@
     <!-- Importing Google Chats Library -->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <!-- Importing JQuery Library -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
     <!-- Importing JS files-->
     <script src="drawChart.js"></script>
+    <script src="jsonChart.js"></script>
 
     <!-- Loading Google Chats Library type and settings -->
     <script>
@@ -19,6 +23,7 @@
       });
 
       google.charts.setOnLoadCallback(drawChart);
+      google.charts.setOnLoadCallback(drawJsonChart);
     </script>
 
     <title>Google Charts - JS</title>
@@ -32,6 +37,7 @@
       <div id="myLineChart"></div>
       <div id="myColumnChart"></div>
       <div id="myBarChart"></div>
+      <div id="myBarChartWithJson"></div>
     </h1>
   </body>
 </html>

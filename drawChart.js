@@ -1,8 +1,7 @@
 function drawChart() {
+  // PIE CHART
   // Define the chart to be drawn.
   var table = new google.visualization.DataTable();
-
-  // PIE CHART
   table.addColumn("string", "Categorias");
   table.addColumn("number", "Valores");
   table.addRows([
