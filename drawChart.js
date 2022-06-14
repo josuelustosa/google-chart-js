@@ -114,12 +114,12 @@ function drawChart() {
   );
   chart.draw(table, options);
 
-  // SURPRISE COLUMN
+  // CHART BAR
   var table = new google.visualization.DataTable();
   table.addColumn("string", "Categorias");
   table.addColumn("number", "Valores");
   table.addColumn({
-    type: "number",
+    type: "string",
     role: "annotation",
   });
   table.addColumn({
@@ -128,12 +128,19 @@ function drawChart() {
   });
 
   table.addRows([
-    ["Educação", 2000, 2000, "blue"],
-    ["Transporte", 500, 500, "#990033"],
-    ["Lazer", 250, 250, "#005221"],
-    ["Saúde", 100, 100, "#999999"],
-    ["Cartão de Crédito", 900, 900, "purple"],
-    ["Alimentação", 260.5, 260.5, "#ff7b00"],
+    ["Educação", 2000, "R$ 2000", "blue"],
+    ["Transporte", 500, "R$ 500", "#990033"],
+    ["Lazer", 250, "R$ 250", "#005221"],
+    ["Saúde", 100, "R$ 100", "#999999"],
+    ["Cartão de Crédito", 900, "R$ 900", "purple"],
+    ["Alimentação", 260.5, "R$ 260.5", "#ff7b00"],
+  ]);
+
+  table.sort([
+    {
+      column: 1, 
+      desc: true
+    }
   ]);
 
   var options = {
@@ -141,14 +148,19 @@ function drawChart() {
     weidht: 920,
     height: 600,
     vAxis: {
-      gridlines: { count: 0 },
-      textPosition: "none",
+      gridlines: {count: 0, color: "transparent"},
     },
+    hAxis: {
+      gridlines: {color: "transparent"},
+      format: "currency",
+      textPosition: "none"
+    },
+    annotations: {alwaysOutside: true},
     legend: "none",
   };
 
   var chart = new google.visualization.BarChart(
-    document.getElementById("mySurpriseColumnChart")
+    document.getElementById("myBarChart")
   );
   chart.draw(table, options);
 }
