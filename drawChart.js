@@ -114,32 +114,19 @@ function drawChart() {
   chart.draw(table, options);
 
   // CHART BAR
-  var table = new google.visualization.DataTable();
-  table.addColumn("string", "Categorias");
-  table.addColumn("number", "Valores");
-  table.addColumn({
-    type: "string",
-    role: "annotation",
-  });
-  table.addColumn({
-    type: "string", 
-    role:"style"
-  });
+  var dadosJson = $.ajax({
+    url: "https://gist.githubusercontent.com/josuelustosadev/64542b7d31582121ce940b75534b8ccf/raw/c94f4d3af47a042f0a5def5ea68347939559dd21/dados-tipos-de-gastos.json",
+    dataType: "json",
+    async: false,
+  }).responseText;
 
-  table.addRows([
-    ["Educação", 2000, "R$ 2000", "blue"],
-    ["Transporte", 500, "R$ 500", "#990033"],
-    ["Lazer", 250, "R$ 250", "#005221"],
-    ["Saúde", 100, "R$ 100", "#999999"],
-    ["Cartão de Crédito", 900, "R$ 900", "purple"],
-    ["Alimentação", 260.5, "R$ 260.5", "#ff7b00"],
-  ]);
+  var table = new google.visualization.DataTable(dadosJson);
 
   table.sort([
     {
-      column: 1, 
-      desc: true
-    }
+      column: 1,
+      desc: true,
+    },
   ]);
 
   var options = {
@@ -147,14 +134,14 @@ function drawChart() {
     weidht: 920,
     height: 600,
     vAxis: {
-      gridlines: {count: 0, color: "transparent"},
+      gridlines: { count: 0, color: "transparent" },
     },
     hAxis: {
-      gridlines: {color: "transparent"},
+      gridlines: { color: "transparent" },
       format: "currency",
-      textPosition: "none"
+      textPosition: "none",
     },
-    annotations: {alwaysOutside: true},
+    annotations: { alwaysOutside: true },
     legend: "none",
   };
 
