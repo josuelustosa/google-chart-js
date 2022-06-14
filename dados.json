@@ -1,15 +1,11 @@
 {
     "cols": [
         {
-            "id": "",
-            "label": "Topping",
-            "pattern": "",
+            "label": "Nome",
             "type": "string"
         },
         {
-            "id": "",
-            "label": "Slices",
-            "pattern": "",
+            "label": "Valor",
             "type": "number"
         }
     ],
@@ -17,11 +13,11 @@
         {
             "c": [
                 {
-                    "v": "Mushrooms",
+                    "v": "João Antônio Marques",
                     "f": null
                 },
                 {
-                    "v": 3,
+                    "v": 25.110,
                     "f": null
                 }
             ]
@@ -29,11 +25,11 @@
         {
             "c": [
                 {
-                    "v": "Onions",
+                    "v": "Ana Siqueira",
                     "f": null
                 },
                 {
-                    "v": 1,
+                    "v": 10.020,
                     "f": null
                 }
             ]
@@ -41,11 +37,11 @@
         {
             "c": [
                 {
-                    "v": "Olives",
+                    "v": "Alcides V. de Oliveira",
                     "f": null
                 },
                 {
-                    "v": 1,
+                    "v": 30.240,
                     "f": null
                 }
             ]
@@ -53,11 +49,11 @@
         {
             "c": [
                 {
-                    "v": "Zucchini",
+                    "v": "Rafael Antunes",
                     "f": null
                 },
                 {
-                    "v": 1,
+                    "v": 2.310,
                     "f": null
                 }
             ]
@@ -65,11 +61,59 @@
         {
             "c": [
                 {
-                    "v": "Pepperoni",
+                    "v": "Bianca M. Sampaio",
                     "f": null
                 },
                 {
-                    "v": 2,
+                    "v": 8.542,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "Victor Barbosa",
+                    "f": null
+                },
+                {
+                    "v": 6.521,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "Maria do Carmo Prado",
+                    "f": null
+                },
+                {
+                    "v": 12.327,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "Maria Heloisa de Almeida",
+                    "f": null
+                },
+                {
+                    "v": 9.764,
+                    "f": null
+                }
+            ]
+        },
+        {
+            "c": [
+                {
+                    "v": "Rita de Cássia Cuaron",
+                    "f": null
+                },
+                {
+                    "v": 20.174,
                     "f": null
                 }
             ]
