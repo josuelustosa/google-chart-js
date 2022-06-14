@@ -133,7 +133,7 @@ function drawChart() {
     ["Lazer", 250, 250, "#005221"],
     ["Saúde", 100, 100, "#999999"],
     ["Cartão de Crédito", 900, 900, "purple"],
-    ["Alimentação", 260.75, 260.75, "#ff7b00"],
+    ["Alimentação", 260.5, 260.5, "#ff7b00"],
   ]);
 
   var options = {
@@ -147,7 +147,7 @@ function drawChart() {
     legend: "none",
   };
 
-  var chart = new google.visualization.ColumnChart(
+  var chart = new google.visualization.BarChart(
     document.getElementById("mySurpriseColumnChart")
   );
   chart.draw(table, options);
